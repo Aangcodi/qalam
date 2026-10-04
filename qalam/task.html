@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qalam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__inner">
+        <a href="index.html" class="logo">qalam<span>.</span></a>
+
+        <div class="header__right">
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" class="lang-switch__btn" data-lang="kk">ҚАЗ</button>
+                <button type="button" class="lang-switch__btn" data-lang="ru">РУС</button>
+                <button type="button" class="lang-switch__btn" data-lang="en">ENG</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="task-page" id="taskPage">
+    <p class="task-topbar__meta" style="text-align:center;padding:40px 0;" data-i18n="loading"></p>
+</div>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <a href="index.html" class="logo">qalam<span>.</span></a>
+        <span class="footer__text">© 2026 Qalam</span>
+    </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="client-api.js"></script>
+<script src="task.js"></script>
+</body>
+</html>
