@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Qalam — учи казахский язык в интерактивном формате">
+<title>Qalam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ornament-strip" aria-hidden="true"></div>
+
+<header class="header">
+    <div class="header__inner">
+        <a href="index.html" class="logo">
+            <span class="logo__mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2 L14 8 L20 6 L16 11 L22 12 L16 13 L20 18 L14 16 L12 22 L10 16 L4 18 L8 13 L2 12 L8 11 L4 6 L10 8 Z"/>
+                </svg>
+            </span>
+            qalam<span class="logo__dot">.</span>
+        </a>
+
+        <div class="header__right">
+            <span class="header__tagline" data-i18n="tagline"></span>
+
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" class="lang-switch__btn" data-lang="kk">ҚАЗ</button>
+                <button type="button" class="lang-switch__btn" data-lang="ru">РУС</button>
+                <button type="button" class="lang-switch__btn" data-lang="en">ENG</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero__inner">
+        <div>
+            <span class="hero__eyebrow">
+                <span class="hero__eyebrow-mark" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z"/>
+                    </svg>
+                </span>
+                <span data-i18n="heroEyebrow"></span>
+            </span>
+
+            <h1 class="hero__title">
+                <span data-i18n="heroTitle1"></span>
+                <span data-i18n="heroTitle2"></span>
+                <span data-i18n="heroTitle3"></span>
+            </h1>
+
+            <p class="hero__sub" data-i18n="heroSub"></p>
+
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <strong id="statTasks">—</strong>
+                    <span data-i18n="statTasks"></span>
+                </div>
+                <div class="hero__stat">
+                    <strong id="statQuestions">—</strong>
+                    <span data-i18n="statQuestions"></span>
+                </div>
+                <div class="hero__stat">
+                    <strong>100%</strong>
+                    <span data-i18n="statFree"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="demo-card" id="demoCard">
+                <div class="demo-badge demo-badge--top">
+                    <span class="demo-badge__dot"></span>
+                    <span class="demo-counter" id="demoCounter">01 / 10</span>
+                </div>
+
+                <div class="demo-card__label" id="demoLabel">Лексика</div>
+                <div class="demo-card__prompt" id="demoPrompt">МЕКТЕП</div>
+                <div class="demo-card__options" id="demoOptions">
+                    <div class="demo-opt">Книга</div>
+                    <div class="demo-opt demo-opt--correct">Школа</div>
+                    <div class="demo-opt">Учитель</div>
+                </div>
+
+                <div class="demo-badge demo-badge--bottom demo-badge--success">
+                    <span class="demo-badge__check">✓</span>
+                    Правильно
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider-ornament" aria-hidden="true">
+    <span class="divider-ornament__line"></span>
+    <span class="divider-ornament__mark">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 4 Q30 12 30 20 Q30 28 20 36 Q10 28 10 20 Q10 12 20 4 Z"/>
+            <path d="M20 12 Q26 16 26 20 Q26 24 20 28 Q14 24 14 20 Q14 16 20 12 Z"/>
+            <circle cx="20" cy="20" r="1.6" fill="currentColor" stroke="none"/>
+        </svg>
+    </span>
+    <span class="divider-ornament__line"></span>
+</div>
+
+<section class="section">
+    <div class="section__head">
+        <h2 class="section__title" data-i18n="chooseTask"></h2>
+        <p class="section__sub" data-i18n="chooseTaskSub"></p>
+    </div>
+
+    <div class="level-switch" id="levelSwitch">
+        <button type="button" class="level-switch__btn is-active" data-level="easy">
+            <span class="level-switch__dot level-switch__dot--easy"></span>
+            <span data-i18n="levelEasy"></span>
+        </button>
+        <button type="button" class="level-switch__btn" data-level="normal">
+            <span class="level-switch__dot level-switch__dot--normal"></span>
+            <span data-i18n="levelNormal"></span>
+        </button>
+        <button type="button" class="level-switch__btn" data-level="hard">
+            <span class="level-switch__dot level-switch__dot--hard"></span>
+            <span data-i18n="levelHard"></span>
+        </button>
+    </div>
+
+    <div class="cards" id="cards">
+        <p class="empty" data-i18n="loading"></p>
+    </div>
+</section>
+
+<div class="ornament-strip ornament-strip--bottom" aria-hidden="true"></div>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <a href="index.html" class="logo logo--footer">
+            <span class="logo__mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2 L14 8 L20 6 L16 11 L22 12 L16 13 L20 18 L14 16 L12 22 L10 16 L4 18 L8 13 L2 12 L8 11 L4 6 L10 8 Z"/>
+                </svg>
+            </span>
+            qalam<span class="logo__dot">.</span>
+        </a>
+        <span class="footer__text">© 2026 Qalam</span>
+    </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="client-api.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
